@@ -31,11 +31,6 @@ A browser-based speech-to-text bot that listens to spoken input, transcribes it,
 2. **Language Detection**: Detects if the spoken input is non-English.
 3. **Translation**: Translates non-English transcriptions into English.
 
-### API Integration
-
-- **Translation API**: In the `detectLanguageAndTranslate()` function, replace placeholder code with actual API calls for language detection and translation.
-- **Error Handling**: Add error handling for API requests to ensure graceful degradation if the API is unreachable.
-
 ## 🎉 **Usage Instructions**
 
 1. **Start the Bot**: Click the “Start” button to initiate speech recognition.
