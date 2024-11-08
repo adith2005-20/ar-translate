@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "name": "New JSNB",
+    "language_info": {
+      "name": "JavaScipt",
+      "version": "8.0"
+    }
+  },
+  "jsnbversion": "v0.1",
+  "cells": [
+    {
+      "code": "// Request microphone permissions\nasync function requestPermissions() {\n    try {\n        await navigator.mediaDevices.getUserMedia({ audio: true });\n        console.log(\"Microphone permissions granted\");\n        startListening(); // Start listening after permissions are granted\n    } catch (error) {\n        console.error(\"Error accessing media devices.\", error);\n    }\n}\n\n// Initialize SpeechRecognition\nlet recognition;\n\nif ('SpeechRecognition' in window) {\n    recognition = new SpeechRecognition();\n} else if ('webkitSpeechRecognition' in window) {\n    recognition = new webkitSpeechRecognition(); // For older versions of Safari\n} else {\n    console.error(\"Speech recognition not supported in this browser.\");\n}\n\n// Set up recognition properties\nrecognition.continuous = true;\nrecognition.interimResults = true;\n\n// Handle results\nrecognition.onresult = async (event) => {\n    const transcript = Array.from(event.results)\n        .map(result => result[0].transcript)\n        .join('');\n    \n    console.log(\"Recognized Text:\", transcript);\n\n    // Call your translation function here\n    const translatedText = await translateText(transcript, 'ES'); // Example: translating to Spanish\n    console.log(\"Translated Text:\", translatedText);\n};\n\n// Start listening function\nfunction startListening() {\n    recognition.start();\n}\n\n// Translate recognized text using DeepL API\nasync function translateText(text, targetLanguage) {\n    const apiKey = 'YOUR_DEEPL_API_KEY'; // Replace with your actual API key\n    const url = `https://api.deepl.com/v2/translate?auth_key=${apiKey}&text=${encodeURIComponent(text)}&target_lang=${targetLanguage}`;\n    \n    const response = await fetch(url, {\n        method: 'POST',\n        headers: {\n            'Content-Type': 'application/x-www-form-urlencoded',\n        },\n    });\n    \n    if (!response.ok) {\n        console.error(\"Error with translation API:\", response.statusText);\n        return null;\n    }\n\n    const data = await response.json();\n    \n    if (data.translations && data.translations.length > 0) {\n        return data.translations[0].text; // Return translated text\n    } else {\n        console.error(\"No translations found.\");\n        return null;\n    }\n}\n\n// Start the application\nrequestPermissions();",
+      "status": "[2]<br><span style=\"font-size:8px\">66ms<span></span></span>",
+      "output": "",
+      "type": "code"
+    }
+  ],
+  "source": "https://github.com/gopi-suvanam/jsnb",
+  "run_on_load": false
+}
