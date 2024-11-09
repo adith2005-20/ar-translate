@@ -7,7 +7,6 @@ ar-translate is a web application created for the ScribblePad Hackathon, designe
 ## Table of Contents
 
 - [Features](#features)
-- [Demo](#demo)
 - [Technologies Used](#technologies-used)
 
 ## Features
