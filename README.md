@@ -23,7 +23,7 @@ ar-translate is a web application created for the ScribblePad Hackathon, designe
 - **HTML5**: Structuring the web application.
 - **CSS3**: Styling and responsive design.
 - **JavaScript (ES6)**: Core functionality and interactivity.
-- **Web Speech API**: Real-time speech recognition.
 - **DeepL API**: High-quality language translation.
 - **Webcam API**: Accessing and integrating webcam input.
 - **Scribble Notebook**: Platform for building and deploying this project.
+- **Web Speech API**: Real-time speech recognition.
