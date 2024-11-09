@@ -1,43 +1,30 @@
 # ar-translate
-A browser-based speech-to-text bot that listens to spoken input, transcribes it, and, if necessary, translates it to English. This bot is built using JavaScript, with real-time speech recognition through the Web Speech API and translation capabilities through external APIs. This project is ideal for building accessible web applications and enhancing language-based user interfaces.
 
-## 📋 **Features**
+ar-translate is a web application created for the ScribblePad Hackathon, designed to break language barriers with real-time speech recognition and translation. By using your webcam, the app overlays translated text in a dynamic speech bubble above your head, enhancing cross-lingual communication with a fun, intuitive interface.
 
-- **Real-Time Speech Recognition**: Converts speech to text in real time using the Web Speech API.
-- **Automatic Language Detection**: Identifies the language of the spoken input.
-- **Automatic Translation**: Translates non-English input into English, displayed in real time.
-- **Simple User Interface**: Offers a start/stop button for easy interaction and displays the results on screen.
+**Team:** Adith Biju, Adwait Mishra, Paarth Jain
 
-## 🛠 **Tech Stack**
+## Table of Contents
 
-- **JavaScript**: Primary language for front-end functionality.
-- **Web Speech API**: Converts speech to text for real-time transcription.
-- **Translation API**: Detects language and translates text to English (e.g., Google Translate API).
-- **Scribble Pad**: Used for developing and testing JavaScript code quickly.
+- [Features](#features)
+- [Demo](#demo)
+- [Technologies Used](#technologies-used)
 
-## 🚀 **Getting Started**
+## Features
 
-### Prerequisites
+- **Real-time Speech Recognition**: Instantly converts spoken words to text.
+- **Language Translation**: Translates recognized speech into the selected target language using the DeepL API.
+- **Dynamic Speech Bubble**: Displays the last 15 translated words in a speech bubble above the user's head, updated in real-time.
+- **Webcam Integration**: Uses webcam input to position the speech bubble accurately.
+- **Multi-language Support**: Supports various languages for recognition and translation.
+- **Responsive Design**: Optimized for different devices and screen sizes.
 
-- **Modern Web Browser**: Chrome is recommended for the best compatibility with the Web Speech API.
-- **API Access**: API key for a translation service (like Google Translate) is necessary for language detection and translation.
-- **Scribble Pad Tool**: Useful for testing and running JavaScript snippets in the browser.
+## Technologies Used
 
-## 📂 **Code Structure**
-
-### Core Modules
-
-1. **Speech Recognition**: Listens to speech and transcribes it in real time.
-2. **Language Detection**: Detects if the spoken input is non-English.
-3. **Translation**: Translates non-English transcriptions into English.
-
-## 🎉 **Usage Instructions**
-
-1. **Start the Bot**: Click the “Start” button to initiate speech recognition.
-2. **Speak Clearly**: Begin speaking, and the bot will capture and transcribe your speech.
-3. **Translation**: If you speak in a non-English language, the bot will translate the text into English and display it.
-4. **Output Display**: View the output in real time on the screen.
-
-## 📜 **License**
-
-This project is open source and available under the [MIT License](LICENSE). Feel free to contribute, modify, or use this code for your own projects!
+- **HTML5**: Structuring the web application.
+- **CSS3**: Styling and responsive design.
+- **JavaScript (ES6)**: Core functionality and interactivity.
+- **Web Speech API**: Real-time speech recognition.
+- **DeepL API**: High-quality language translation.
+- **Webcam API**: Accessing and integrating webcam input.
+- **Scribble Notebook**: Platform for building and deploying this project.
